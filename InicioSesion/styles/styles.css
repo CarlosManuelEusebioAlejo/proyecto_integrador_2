@@ -4,9 +4,10 @@
     --gris: #A0A0A0;
     /*Negro Difumidano*/
     --negro: #000000;
-    --negroMate: #000000dc;
+    --negroMate: #000000b4;
     --verde:#00FF08;
-    --bordes: #ffffff;
+    --bordes2: #ffffff;
+    --bordes2: #fff700;
     /*tablas de colores*/
     --azul: #092635;
     --verdeFuerte: #1B4242;
@@ -15,17 +16,26 @@
 }
 /*titulo*/
 .titulo{
-    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-family: 'Lobster', sans-serif;
+
     font-size: 5rem;
     font-weight: 700;
-    color: var(--bordes);
+    color: var(--bordes2);
     text-align: center;
 
 }
 /*Fondo de la pagina*/
 .fondo-body{
-    background-color: var(--negroMate);
+    background-image: url('../fondo.png');
+  }
+  
+.imagen-fondo{
+  background-color: var(--negroMate);
+  width: 1700px; /* Ancho de la imagen */
+  height: 800px; /* Alto de la imagen */ 
+  padding: 5rem ;
 }
+
 
 /*Seccion de inicio de sesion*/
 .cuadro-inicioSesion{
@@ -60,24 +70,34 @@
   
   .card-side::before {
     position: absolute;
+    text-align: center;
     content: 'Iniciar';
-    left: -70px;
+    left: -100px;
     top: 0;
-    width: 100px;
+    width: 90px;
     text-decoration: underline;
-    color: var(--bordes);
-    font-weight: 600;
+    color: var(--bordes2);
+    font-weight: 600;    
+    border-radius: 5px;
+    box-shadow: 0 3px 5px var(--bordes2);
+    transition: 0.3s;
+    background-color: var(--negro);
   }
   
   .card-side::after {
     position: absolute;
+    text-align: center;
     content: 'Registrate';
-    left: 70px;
+    left: 80px;
     top: 0;
     width: 100px;
     text-decoration: none;
-    color: var(--bordes);
-    font-weight: 600;
+    color: var(--bordes2);
+    font-weight: 600;    
+    border-radius: 5px;
+    box-shadow: 0 3px 5px var(--bordes2);
+    transition: 0.3s;
+    background-color: var(--negro);
   }
   
   .toggle {
@@ -94,8 +114,8 @@
     position: absolute;
     cursor: pointer;
     top: 0;
-    left: 0;
-    right: 0;
+    left: 15px;
+    right: -2px;
     bottom: 0;
     background-color: var(--bg-colorcolor);
     transition: 0.3s;
@@ -107,12 +127,12 @@
     content: "";
     height: 20px;
     width: 20px;
-    border: 2px solid var(--bordes);
+    border: 2px solid var(--bordes2);
     border-radius: 5px;
     left: -2px;
     bottom: 2px;
-    background-color: var(--bordes);
-    box-shadow: 0 3px 0 var(--bordes);
+    background-color: var(--bordes2);
+    box-shadow: 0 3px 0px var(--bordes2);
     transition: 0.3s;
   }
   
@@ -156,6 +176,7 @@
   }
   
   .flip-card__front, .flip-card__back {
+    font-family: 'Indie Flower', cursive;
     padding: 20px;
     position: absolute;
     display: flex;
@@ -166,8 +187,12 @@
     background: var(--negro);
     gap: 20px;
     border-radius: 10px;
-    border: 2px solid var(--bordes);
+    border: 1px solid var(--bordes2);
     /*box-shadow: 3px 5px var(--negro); sombra*/
+    background-color: #161616;
+    box-shadow: 0px 5px 15px var(--bordes2);
+    outline: 1px solid var(--bordes2);
+    border-radius: 10px;
   }
   
   .flip-card__back {
@@ -183,52 +208,77 @@
   }
   
   .title {
+    font-family: 'Indie Flower', cursive;
     margin: 20px 0 20px 0;
     font-size: 25px;
     font-weight: 900;
     text-align: center;
-    color: var(--bordes);
+    color: var(--bordes2);
+    color: var(--bordes2);
+    font-weight: 600;
+    font-size: 40px;
   }
   
   .flip-card__input {
+    font-family: 'Indie Flower', cursive;
     width: 250px;
     height: 40px;
     border-radius: 5px;
-    border: 1px solid var(--bordes);
+    /*border: 1px solid var(--bordes2);
     background-color: var(--negro);
-    box-shadow: 4px 4px var(--bordes);
+    box-shadow: 4px 4px var(--bordes2);*/
     font-size: 15px;
     font-weight: 600;
-    color: var(--bordes);
+    color: var(--bordes2);
     padding: 5px 10px;
     outline: none;
+    padding: 11px 25px;
+    background: transparent;
+    border: 1px solid #e3e3e3;
+    line-height: 1;
+    border-radius: 8px;
     
   }
   
   .flip-card__input::placeholder {
-    color: var(--bordes);
+    color: var(--bordes2);
     opacity: 0.8;
   }
   
   .flip-card__input:focus {
-    border: 2px solid var(--bordes);
+    border: 2px solid var(--bordes2);
   }
   
   .flip-card__btn:active, .button-confirm:active {
-    box-shadow: 0px 0px var(--bordes);
+    box-shadow: 0px 0px var(--bordes2);
     transform: translate(3px, 3px);
   }
   
   .flip-card__btn {
-    margin: 20px 0 20px 0;
+    /*margin: 20px 0 20px 0;
     width: 120px;
     height: 40px;
     border-radius: 5px;
-    border: 2px solid var(--bordes);
+    border: 2px solid var(--bordes2);
     background-color: var(--negroMate);
-    box-shadow: 4px 4px var(--bordes);
+    box-shadow: 4px 4px var(--bordes2);
     font-size: 17px;
     font-weight: 600;
-    color: var(--bordes);
+    color: var(--bordes2);
+    cursor: pointer;*/
+    font-family: 'Indie Flower', cursive;
+    display: block;
+    width: 100%;
+    color: var(--bordes2);
+    background-color: transparent;
+    font-weight: 600;
+    font-size: 14px;
+    margin: 0;
+    padding: 14px 13px 12px 13px;
+    border: 0;
+    outline: 1px solid var(--bordes2);
+    border-radius: 8px;
+    line-height: 1;
     cursor: pointer;
+    transition: all ease-in-out .3s;
   } 
