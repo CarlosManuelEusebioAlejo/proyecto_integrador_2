@@ -6,8 +6,9 @@
     --negro: #000000;
     --negroMate: #000000b4;
     --verde:#00FF08;
-    --bordes2: #ffffff;
-    --bordes2: #fff700;
+    --bordes1: #f5f114;
+    --bordes2: #bdb82e;
+    --sombra: #2359ec;
     /*tablas de colores*/
     --azul: #092635;
     --verdeFuerte: #1B4242;
@@ -26,7 +27,7 @@
 }
 /*Fondo de la pagina*/
 .fondo-body{
-    background-image: url('../images/ondo.png'); 
+    background-image: url('../images/fondo.png'); 
   }
   
 .imagen-fondo{
@@ -190,8 +191,8 @@
     border: 1px solid var(--bordes2);
     /*box-shadow: 3px 5px var(--negro); sombra*/
     background-color: #161616;
-    box-shadow: 0px 5px 15px var(--bordes2);
-    outline: 1px solid var(--bordes2);
+    box-shadow: 0px 5px 15px var(--sombra);
+    outline: 1px solid var(--bordes1);
     border-radius: 10px;
   }
   
