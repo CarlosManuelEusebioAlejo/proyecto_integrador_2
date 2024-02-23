@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Perfil de Usuario</title>
+<style>
+  body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: row-reverse; /* Ajusta la dirección para que la barra lateral esté a la derecha */
+  }
+
+  .sidebar {
+    background-color: #333;
+    color: white;
+    width: 250px;
+    height: 100vh;
+    padding: 20px;
+    position: fixed; /* Hace que la barra lateral sea fija al lado derecho */
+    right: 0; /* Alinea la barra lateral a la derecha */
+  }
+
+  .content {
+    flex: 1; /* Toma el espacio restante */
+    padding: 20px;
+  }
+
+  .profile {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-bottom: 20px;
+    border-bottom: 1px solid grey;
+  }
+
+  .profile img {
+    border-radius: 50%;
+    margin-bottom: 10px;
+  }
+
+  .profile-name {
+    margin: 0;
+  }
+
+  .profile-email {
+    color: #aaa;
+    font-size: 0.9em;
+  }
+
+  .menu-item {
+    padding: 10px 0;
+    cursor: pointer;
+  }
+
+  .menu-item:hover {
+    background-color: #555;
+  }
+
+  .active {
+    background-color: teal;
+  }
+
+  .sidebar {
+  background-color: #333;
+  color: white;
+  width: 250px;
+  height: 100vh;
+  padding: 20px;
+  position: fixed;
+  right: 0;
+  border-radius: 10px; /* Esquinas redondeadas para la barra lateral */
+  overflow: hidden; /* Asegura que el contenido no se desborde del borde redondeado */
+}
+
+.profile img {
+  border-radius: 50%; /* Circular para la imagen de perfil */
+  margin-bottom: 10px;
+  width: 80px; /* Asegúrate de que el tamaño de la imagen sea el deseado */
+  height: 80px; /* Asegúrate de que el tamaño de la imagen sea el deseado */
+}
+
+.menu-item {
+  padding: 10px 15px; /* Añade padding a izquierda y derecha para un mejor aspecto */
+  cursor: pointer;
+  border-radius: 5px; /* Esquinas ligeramente redondeadas para cada elemento del menú */
+}
+
+/* Si quieres que solo el primer y último elemento del menú tengan las esquinas superiores e inferiores redondeadas, respectivamente: */
+.menu-item:first-child {
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+}
+
+.menu-item:last-child {
+  border-bottom-left-radius: 5px;
+  border-bottom-right-radius: 5px;
+}
+
+.sidebar {
+  background-color: #333;
+  color: white;
+  width: 250px;
+  /* Cambia la altura aquí a un valor fijo o a un porcentaje */
+  height: auto; /* Esto hará que la altura dependa del contenido */
+  max-height: 90vh; /* O un máximo, para que no sea más largo que el 90% de la altura de la pantalla */
+  padding: 20px;
+  position: fixed;
+  right: 0;
+  border-radius: 10px;
+  overflow: auto; /* Agrega desplazamiento si el contenido es más largo que la altura máxima */
+}
+</style>
+</head>
+<body>
+
+<div class="sidebar">
+  <div class="profile">
+    <img src="img2/eusebin2.jpg" alt="Perfil" width="80" height="80">
+    <h3 class="profile-name">eusebin</h3>
+    <p class="profile-email">ceusebio@ucol.mx</p>
+  </div>
+
+  <div class="menu-item active">cambiar cuenta</div>
+  <div class="menu-item">Perfil</div>
+  <div class="menu-item">Mensajes</div>
+  <div class="menu-item">Configuración</div>
+  <div class="menu-item">Salir</div>
+</div>
+
+<!-- Añadir contenedor para contenido principal -->
+<div class="content">
+  <!-- Aquí va el contenido principal de la página -->
+</div>
+
+</body>
+</html> 
