@@ -190,7 +190,7 @@ body{
     font-family: var(--tipografias1);
     position: relative;
     width: 300px;
-    height: 384px;
+    height: 780px;
     display: flex;
     flex-direction: column;
     align-items: center;
