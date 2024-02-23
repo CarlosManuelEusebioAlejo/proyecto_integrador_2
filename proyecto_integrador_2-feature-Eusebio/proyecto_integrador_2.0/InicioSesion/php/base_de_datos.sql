@@ -41,12 +41,16 @@ INSERT INTO `administradores` (`IdAdministrador`, `Nombre`                     ,
 -- imagenes --
 DROP TABLE IF EXISTS `blog_web`.`imagenes`;
 CREATE TABLE IF NOT EXISTS `blog_web`.`imagenes` (
-    `id`            SMALLINT UNSIGNED NOT NULL AUTO_INCREMENT PRIMARY KEY COMMENT 'Id de la imagen',
+    `idImagen`            SMALLINT UNSIGNED NOT NULL AUTO_INCREMENT PRIMARY KEY COMMENT 'Id de la imagen',
     `titulo`        VARCHAR(100)      NOT NULL                            COMMENT 'Titulo de la imagen',
     `descripcion`   TEXT                                                  COMMENT 'Descripcion de la imagen',
     `imagen`        MEDIUMBLOB NOT NULL                                   COMMENT 'imagen',
     `FechaRegistro` datetime NOT NULL DEFAULT current_timestamp() COMMENT 'Fecha y hora de creación del registro'
 ) ENGINE=InnoDB DEFAULT CHARACTER SET=utf8mb4 COLLATE=utf8mb4_unicode_ci  COMMENT='Tabla de registros de las imagenes';
+
+--Insertar base de datos administradores--
+INSERT INTO `imagenes` (`idImagen`, `titulo`                     , `Email`            , `Administrador`, `Contrasena`, `FechaRegistro`) VALUES
+                       (1         , 'Fulanito de tal'            , 'ceusebio0@ucol.mx', 'ManuelEusebio', 123456789   , '2024-02-22 1:18:10');
 
 
 -- publicaciones --
