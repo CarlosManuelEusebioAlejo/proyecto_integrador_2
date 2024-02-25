@@ -62,7 +62,7 @@
                            <div class="title">Inicia Sesion</div>
                            <form class="flip-card__form" action="php/api_login_usuario.php" method="POST">
                               <input class="flip-card__input" name="Email" placeholder="Email" type="Email">
-                              <input class="flip-card__input" name="contrasena" placeholder="contraseña" type="contrasena">
+                              <input class="flip-card__input" name="Contrasena" placeholder="contraseña" type="contrasena">
                               <button class="flip-card__btn">Iniciar Sesion</button>
                            </form>
                         </div>

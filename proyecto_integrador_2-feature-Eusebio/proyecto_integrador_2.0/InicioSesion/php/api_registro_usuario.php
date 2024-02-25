@@ -8,7 +8,7 @@
     $Contrasena = $_POST['Contrasena'];
 
     //código para incriptar una contraseña
-    $Contrasena = hash('sha512', $Contrasena);
+    //$Contrasena = hash('sha512', $Contrasena);
 
     $query = "INSERT INTO usuarios(Nombre, Email, Usuario, Contrasena)
               VALUES('$Nombre', '$Email', '$Usuario', '$Contrasena')";

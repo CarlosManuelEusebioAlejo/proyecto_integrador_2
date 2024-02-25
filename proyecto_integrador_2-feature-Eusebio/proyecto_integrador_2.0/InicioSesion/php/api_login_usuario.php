@@ -3,13 +3,13 @@
     include 'api_conexion.php';
 
     $Email = $_POST['Email'];
-    $Contraseña = $_POST['Contrasena'];
+    $Contrasena = $_POST['Contrasena'];
 
     $validar_login = mysqli_query($conexion, "SELECT * FROM usuarios WHERE Email='$Email' and Contrasena='$Contrasena'");
 
     if(mysqli_num_rows($validar_login) > 0)
     {
-        header("location: ../interfaceAdmin/interfaceAdmin.html");
+        header("location: http://localhost/proyecto_integrador_2-feature-Eusebio/proyecto_integrador_2.0/interfaceAdmin/interfaceAdmin.html");
         exit;
     }
     else
