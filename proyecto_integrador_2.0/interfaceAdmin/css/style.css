@@ -172,8 +172,8 @@ body{
     flex-grow: 1;/*Tamaño de recuadro*/
     border-radius: 20px;
     transition: all .3s;
-    width: 800px;
-    height: auto;
+    width: 800px;/*Ancho de submenu*/
+    height: auto;/*Largo adaptable*/
 }
 /*Animaciones al momento de poner el cursor arriba del recuadro*/
 .sub-menu2:hover {
@@ -187,17 +187,41 @@ body{
     transform: scale(0.98);
     border-radius: 20px;
 }
-/*Publicacion contenido*/
+/*Publicacion contenido-------------------------------*/
 .publicacion{
     padding: 3rem;
     display: grid;
 }
+.encabezados{
+    display: grid;
+    padding: 2rem 3rem 0rem 3rem;
+    border-radius: 1rem 1rem 0 0;
+    background-color: var(--fondoPublicacion);
+}
+
+.nombre{
+    /*     Arriba derecha abajo izquierda*/
+    padding: 1rem 0rem 0rem 3rem; /*Separaciones entre los titulos*/
+    font-style: italic;
+}
+.tituloPublicacion{
+    padding: 0rem 3rem 1rem 3rem;
+    font-size: 2rem;
+    font-weight: bold;
+    text-align: center;
+}
+.tituloSubtitulo{
+    padding: 0rem 3rem 1rem 3rem;
+    font-size: 1.5rem;
+    font-weight:lighter;
+    text-align: center;
+}
 
 .imagenPublicacion{
     display: flex;
-    padding: 3rem 3rem 1rem 3rem;
+    padding: 1rem 3rem 1rem 3rem;
     justify-content: center;
-    border-radius: 1rem 1rem 0 0;
+    /*border-radius: 1rem 1rem 0 0*/
     background-color: var(--fondoPublicacion);
 
 }
@@ -246,6 +270,9 @@ body{
     border-radius: 20px;
     background: var(--bg-color);
 }
+#scrollingDiv {/*Navegar con el scroll*/
+    z-index: 1000;/*Nivel de apilamiento*/
+  }
 
 /*Plantilla de iuVerse*/
   .card__img {
