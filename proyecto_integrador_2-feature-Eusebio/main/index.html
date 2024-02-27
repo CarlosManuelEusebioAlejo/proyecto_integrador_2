@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <!-- Metadatos del documento -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Título de la página -->
+    <title>VitalLife</title>
+    <!-- Enlace a hojas de estilo externas -->
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/fontello.css">
+</head>
+<body>
+    <!-- Encabezado de la página -->
+    <header class="header">
+        <div class="container">
+            <!-- Botón de menú -->
+            <div class="btn-menu">
+                <label for="btn-menu" class="icon-menu"></label>
+            </div>
+            <!-- Logotipo -->
+            <div class="logo">
+                <h1>VitalFitLife</h1>
+            </div>
+            <!-- Menú de navegación -->
+            <nav class="menu">
+                <!-- Íconos de perfil -->
+                <div class="profile-icon">
+                    <a href="#" class="icon-bell"></a>
+                    <a href="#" class="icon-cog"></a>
+                    <a href="#" class="icon-user" id="icon-user"></a>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Checkbox para el menú desplegable -->
+    <input type="checkbox" name="" id="btn-menu">
+    <!-- Contenedor del menú desplegable -->
+    <div class="container-menu">
+        <div class="cont-menu">
+            <!-- Opciones de navegación -->
+            <nav class="actions">
+                <a href="http://localhost/proyecto_integrador_2-feature-Eusebio/proyecto_integrador_2.0/InicioSesion/">Inicio</a>
+                <a href="#">Acerca de</a>
+                <a href="#">Servicios</a>
+                <a href="#">Contacto</a>
+            </nav>
+            <!-- Íconos de redes sociales -->
+            <label for="btn-menu" class="icon-cancel"></label>
+            <div>
+                <nav class="social">
+                    <a href="#" class="icon-thumbs-up-alt"></a>
+                    <a href="#" class="icon-share"></a>
+                </nav>
+            </div>
+        </div>
+    </div>
+
+    <!-- checkbox para el menú del inicio de sesión-->
+<input type="checkbox" id="btn-user">
+<!-- Contenedor del menú de inicio de sesion -->
+<div class="container-user" id="user-menu"> <!-- Agregar un ID único -->
+    <div class="cont-user">
+        <div class="menu-item"><a href="http://localhost/proyecto_integrador_2-feature-Eusebio/InicioSesion/">Administrador</a></div>
+        <div class="menu-item"><a href="http://localhost/proyecto_integrador_2-feature-Eusebio/InicioSesion/">Editor</a></div>  
+    </div>
+</div>
+
+<script>
+    document.addEventListener("DOMContentLoaded", function() {
+        var userIcon = document.querySelector(".icon-user");
+        var userMenu = document.getElementById("user-menu");
+
+        // Mostrar u ocultar el menú al hacer clic en el icono de usuario
+        userIcon.addEventListener("click", function() {
+            userMenu.classList.toggle("show-menu");
+        });
+
+        // Ocultar el menú al hacer clic en cualquier otra parte de la página
+        document.addEventListener("click", function(event) {
+            if (!userMenu.contains(event.target) && !userIcon.contains(event.target)) {
+                userMenu.classList.remove("show-menu");
+            }
+        });
+    });
+</script>
+
+</body>
+</html>
