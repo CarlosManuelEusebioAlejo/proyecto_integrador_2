@@ -8,13 +8,13 @@
 }
 :root{
     /*Variables de colores*/
-    --fondo1: #434343fe;
-    --fondo2: #676767a5;
-    --fondo3: #1f1f1f;
+    --fondo1: #fffffffe;
+    --fondo2: #cbcbcbca;
+    --fondo3: #5a5a5a;
 
     /*Textos*/
-    --fondoPublicacion: #cacacac5;
-    --fondoTexto: #a8a8a8;
+    --fondoPublicacion: #e7e7e7bd;
+    --fondoTexto: #d4d3d3;
     --IluminacionComentarios1: #c2c2c2;
     --IluminacionComentarios2: hsl(0, 0%, 0%);
 
@@ -165,13 +165,14 @@ body{
     background-color: var(--fondo2);
     flex-grow: 0.8; /*Tamaño de recuadro*/
     margin-right: 40px;
-    border: #1c1c1c;
+    border: 0.5px groove #1c1c1c6c;
     border-radius: 20px;
     transition: all .3s;
 }
 .sub-menu2{
     background-color: var(--fondo2);
     flex-grow: 1;/*Tamaño de recuadro*/
+    border: 0.5px groove rgba(0, 0, 0, 0.377);;
     border-radius: 20px;
     transition: all .3s;
     width: 800px;/*Ancho de submenu*/
@@ -180,13 +181,13 @@ body{
 /*Animaciones al momento de poner el cursor arriba del recuadro*/
 .sub-menu2:hover {
     box-shadow: 0px 0px 30px 1px var(--fondo3);
-    transform: scale(0.98);
+    /* transform: scale(0.98); animacion para agrandafr ls imsgrn*/ 
     border-radius: 20px;
 }
    
 .sub-menu1:hover {
     box-shadow: 0px 0px 30px 1px var(--fondo3);
-    transform: scale(0.98);
+    /* transform: scale(0.98); */
     border-radius: 20px;
 }
 /*Publicacion contenido-------------------------------*/
@@ -352,7 +353,7 @@ body{
     font-family: var(--tipografias1);
     position: relative;
     width: 100px;
-    height: 784px;
+    height: 600px;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -410,7 +411,7 @@ body{
     width: 156px;
     height: 61px;
     border: 2px solid var(--main-color);
-    border-radius: 4px;
+    border-radius: 10rem;
     font-weight: 700;
     font-size: 14px;
     color: var(--main-color);
