@@ -1,0 +1,136 @@
+/* The Modal (background) */
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+  }
+  
+  /* Modal Content/Box */
+  .modal-content {
+    background-color: #fefefe;
+    margin: 15% auto; /* 15% from the top and centered */
+    padding: 20px;
+    border-radius: 15px;
+    border: 1px solid #888;
+    width: 1000px;/*Ancho de submenu*/
+    height: auto;/*Largo adaptable*/
+  }
+  
+  /* The Close Button */
+  .close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+  }
+  
+  .close:hover,
+  .close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+  }
+  
+
+
+  .sub-menu2{
+    background-color: var(--fondo2);
+    flex-grow: 1;/*Tamaño de recuadro*/
+    border: 0.5px groove rgba(0, 0, 0, 0.377);;
+    border-radius: 20px;
+    transition: all .3s;
+    width: auto;/*Ancho de submenu*/
+    height: auto;/*Largo adaptable*/
+}
+/*Animaciones al momento de poner el cursor arriba del recuadro*/
+.sub-menu2:hover {
+    box-shadow: 0px 0px 30px 1px var(--fondo3);
+    /* transform: scale(0.98); animacion para agrandafr ls imsgrn*/ 
+    border-radius: 20px;
+}
+   
+.sub-menu1:hover {
+    box-shadow: 0px 0px 30px 1px var(--fondo3);
+    /* transform: scale(0.98); */
+    border-radius: 20px;
+}
+/*Publicacion contenido-------------------------------*/
+.publicacion{
+    padding: 3rem;
+    display: grid;
+}
+.encabezados{
+    display: grid;
+    padding: 2rem 3rem 0rem 3rem;
+    border-radius: 1rem 1rem 0 0;
+    background-color: var(--fondoPublicacion);
+}
+
+.nombre{
+    /*     Arriba derecha abajo izquierda*/
+    padding: 1rem 0rem 0rem 3rem; /*Separaciones entre los titulos*/
+    font-style: italic;
+}
+.fecha{
+    padding: 0rem 3rem 1rem 3rem;
+    font-size: 1rem;
+    font-weight: lighter;
+    text-align: right;
+
+}
+.tituloPublicacion{
+    padding: 0rem 3rem 1rem 3rem;
+    font-size: 2rem;
+    font-weight: bold;
+    text-align: center;
+}
+.tituloSubtitulo{
+    padding: 0rem 3rem 1rem 3rem;
+    font-size: 1.5rem;
+    font-weight:lighter;
+    text-align: center;
+}
+
+.imagenPublicacion{
+    display: flex;
+    padding: 1rem 3rem 1rem 3rem;
+    justify-content: center;
+    /*border-radius: 1rem 1rem 0 0*/
+    background-color: var(--fondoPublicacion);
+
+}
+
+.publicacion img{
+    width: 800px;/*Renderizado de imagenes*/
+    height: 500px;
+    border-radius: 8px;
+}
+/*Texto publicaion*/
+.textoP{
+    padding: 1rem 3rem 3rem 3rem;
+    display: grid;
+    border-radius: 0 0 1rem 1rem; /*Bordes redondeados*/
+    justify-content: center;
+    background-color: var(--fondoPublicacion);
+
+}
+.textoPublicacion{
+    width: 50rem;
+    background-color: var(--fondoTexto);
+    padding: 1rem 1rem 1rem 1rem;
+    display: flex;
+    border-radius: 1rem 1rem 1rem 1rem;
+    justify-content: center;
+    /*background-color: var(--fondoPublicacion);*/
+}
+
+.textoPublicacion p{
+    font-size: auto;
+    text-align: justify;
+}
