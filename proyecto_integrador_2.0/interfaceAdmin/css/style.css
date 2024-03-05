@@ -61,7 +61,7 @@ body{
 .logo h1{
     color: white;
     font-weight: 400;
-    font-size: 22px;
+    font-size: 30px;
     margin-left: 10px;
 }
 .container .menu{
@@ -76,7 +76,7 @@ body{
     color: white;
     transition: all 0.3s ease;
     border-bottom: 2px solid transparent;
-    font-size: 15px;
+    font-size: 25px;
 }
 .container .menu a:hover{
     border-bottom: 2px solid #c7c7c7;
