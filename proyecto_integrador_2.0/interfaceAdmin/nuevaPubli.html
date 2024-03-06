@@ -7,43 +7,41 @@
 <link rel="stylesheet" href="css/styles-nuevaPubli.css">
 </head>
 <body>
+  <div class="menu">
+      <form class="Sub-menu2">
+        <section class="menu-publicaciones">
+            <div class="Publicacion">
+                <div class="Encabezados">
+                    <section class="Fecha">infecha/de/publicacion</section>
+                    <section class="Nombre">Nombre usuario</section>
+                    <section class="TituloPublicacion">
+                      <textarea class="LetrasInput IntTitulo" placeholder="Titulo..." name="titulo" id="CuadroTextosAjustables" rows="1"></textarea>
+                    </section>
 
-<!-- Button to open the modal -->
-<button id="openModalBtn">Open Modal</button>
-
-<!-- The Modal -->
-<div id="myModal" class="modal">
-
-  <!-- Modal content -->
-  <div class="modal-content">
-    <span class="close">&times;</span>
-    <form class="sub-menu2">
-      <section class="menu-publicaciones">
-          <div class="publicacion">
-              <form class="encabezados">
-                  <section class="fecha">
-                    <input type="text" placeholder="fecha">
-                    <label for="sub-menu2"></label>
-                  </section>
-                  <section class="nombre">Nombre usuario</section>
-                  <section class="tituloPublicacion">Titulo todo pendejo </section>
-                  <section class="tituloSubtitulo">Titulo todo pendejo </section>
-              </form>
-              <div class="imagenPublicacion">
-                  <img src="img/background.jpg" alt="">
-              </div>
-              <div class="textoP">
-                  <div class="textoPublicacion">
-                      <p>,aadipiscipiscing elit. Aenean commodo ligula eadipiscipiscing elit. Aenean commodo ligula eadipiscipiscing elit. Aenean commodadipiscipiscing elit. Aenean commodo ligula eadipiscipiscing elit. Aenean commodo ligula eadipiscipiscing elit. Aenean commodo ligula eadipiscipiscing elit. Aenean commodo ligula eadipiscipiscing elit. Aenean commodo ligula eadipiscipiscing elit. Aenean commodo ligula eadipiscipiscing elit. Aenean commodo ligula eadipiscipiscing elit. Aenean commodo ligula eadipiscipiscing elit. Aenean commodo ligula eadipiscipiscing elit. Aenean commodo ligula eadipiscipiscing elit. Aenean commodo ligula eadipiscipiscing elit. Aenean commodo ligula eadipiscipiscing elit. Aenean commodo ligula eo ligula e    dipiscipiscing elit. Aenean commodo ligula eget iing elit. Aenean commodo ligula eget ipiscing elit. Aenean commodo ligula eget dolor. Ac, commodo ligula eget dol elit. Aenean commodo ligula eget dolor. Ac, commodo ligula egetdolor. Ac, commodo ligula eget dol elit. Aenean commodo ligula eget dolor. Ac, commodo ligula eget d </p>
-                  </div>
-              </div>
-          </div>
-      </section><!--menu-publicaciones-->
-</form><!--sub-menu2-->
-  </div>
-
-</div>
-
-<script src="resorces/nuevaPubli.js"></script>
+                    <section class="TituloSubtitulo">
+                        <textarea class="LetrasInput IntSubtitulo" placeholder="Subtitulo..." name="subtitulo" id="CuadroTextosAjustables" rows="1"></textarea>
+                    </section>
+                </div>
+                <div class="ImagenPublicacion">
+                    <div id="imagenContainer">
+                        <!-- <img src="img/background.jpg" alt=""> -->
+                        <input id="imagenInput" type="file" accept="image/*">
+                        <button type="submit">Enviar</button>
+                    </div>
+                </div>
+                <div class="TextoP">
+                    <div class="TextoPublicacion">
+                      <textarea class="LetrasInput Descripcion" placeholder="Descripcion" name="" id="" cols="30" rows="10" id="CuadroTextosAjustables"></textarea>
+                        <!-- <p>,aadipiscipiscing elit. Aenean commodo ligula eadipiscipiscing elit. Aenean commodo ligula eadipiscipiscing elit. Aenean commodadipiscipiscing elit. Aenean commodo ligula eadipiscipiscing elit. Aenean commodo ligula eadipiscipiscing elit. Aenean commodo ligula eadipiscipiscing elit. Aenean commodo ligula eadipiscipiscing elit. Aenean commodo ligula eadipiscipiscing elit. Aenean commodo ligula eadipiscipiscing elit. Aenean commodo ligula eadipiscipiscing elit. Aenean commodo ligula eadipiscipiscing elit. Aenean commodo ligula eadipiscipiscing elit. Aenean commodo ligula eadipiscipiscing elit. Aenean commodo ligula eadipiscipiscing elit. Aenean commodo ligula eadipiscipiscing elit. Aenean commodo ligula eo ligula e    dipiscipiscing elit. Aenean commodo ligula eget iing elit. Aenean commodo ligula eget ipiscing elit. Aenean commodo ligula eget dolor. Ac, commodo ligula eget dol elit. Aenean commodo ligula eget dolor. Ac, commodo ligula egetdolor. Ac, commodo ligula eget dol elit. Aenean commodo ligula eget dolor. Ac, commodo ligula eget d </p> -->
+                    </div>
+                </div>
+            </div>
+        </section><!--menu-publicaciones-->
+    </form><!--sub-menu2-->
+<!--Publicaciones----------------------------------------------------------------->
+<!-------------------------------------------------------------------------------->
+<script src="resorces/ajustarRows.js"></script>
+<script src="resorces/imagenInput.js"></script>
+</div><!--menu-principal-->
 </body>
 </html>

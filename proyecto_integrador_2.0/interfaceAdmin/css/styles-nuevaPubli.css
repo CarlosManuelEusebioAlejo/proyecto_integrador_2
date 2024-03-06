@@ -1,103 +1,56 @@
-/* The Modal (background) */
-.modal {
-    display: none; /* Hidden by default */
-    position: fixed; /* Stay in place */
-    z-index: 1; /* Sit on top */
-    left: 0;
-    top: 0;
-    width: 100%; /* Full width */
-    height: 100%; /* Full height */
-    overflow: auto; /* Enable scroll if needed */
-    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
-  }
-  
-  /* Modal Content/Box */
-  .modal-content {
-    background-color: #fefefe;
-    margin: 15% auto; /* 15% from the top and centered */
-    padding: 20px;
-    border-radius: 15px;
-    border: 1px solid #888;
-    width: 1000px;/*Ancho de submenu*/
-    height: auto;/*Largo adaptable*/
-  }
-  
-  /* The Close Button */
-  .close {
-    color: #aaa;
-    float: right;
-    font-size: 28px;
-    font-weight: bold;
-  }
-  
-  .close:hover,
-  .close:focus {
-    color: black;
-    text-decoration: none;
-    cursor: pointer;
-  }
-  
-
-
-  .sub-menu2{
+.menu{
+    display: flex;
+    justify-content: center;
+}
+.Sub-menu2{
+    display: flex;
+    justify-content:center ;
     background-color: var(--fondo2);
-    flex-grow: 1;/*Tamaño de recuadro*/
     border: 0.5px groove rgba(0, 0, 0, 0.377);;
     border-radius: 20px;
     transition: all .3s;
-    width: auto;/*Ancho de submenu*/
+    width: 1000px;/*Ancho de submenu*/
     height: auto;/*Largo adaptable*/
 }
-/*Animaciones al momento de poner el cursor arriba del recuadro*/
-.sub-menu2:hover {
-    box-shadow: 0px 0px 30px 1px var(--fondo3);
-    /* transform: scale(0.98); animacion para agrandafr ls imsgrn*/ 
-    border-radius: 20px;
-}
-   
-.sub-menu1:hover {
-    box-shadow: 0px 0px 30px 1px var(--fondo3);
-    /* transform: scale(0.98); */
-    border-radius: 20px;
-}
+
 /*Publicacion contenido-------------------------------*/
-.publicacion{
+.Publicacion{
     padding: 3rem;
     display: grid;
 }
-.encabezados{
+.Encabezados{
     display: grid;
-    padding: 2rem 3rem 0rem 3rem;
+    padding: 0rem 3rem 0rem 3rem;
     border-radius: 1rem 1rem 0 0;
     background-color: var(--fondoPublicacion);
 }
 
-.nombre{
+.Nombre{
     /*     Arriba derecha abajo izquierda*/
     padding: 1rem 0rem 0rem 3rem; /*Separaciones entre los titulos*/
     font-style: italic;
 }
-.fecha{
+.Fecha{
     padding: 0rem 3rem 1rem 3rem;
     font-size: 1rem;
     font-weight: lighter;
     text-align: right;
 
 }
-.tituloPublicacion{
-    padding: 0rem 3rem 1rem 3rem;
+.TituloPublicacion{
+    padding: 1rem 3rem 1rem 3rem;
     font-size: 2rem;
     font-weight: bold;
     text-align: center;
 }
-.tituloSubtitulo{
+.TituloSubtitulo{
     padding: 0rem 3rem 1rem 3rem;
     font-size: 1.5rem;
     font-weight:lighter;
     text-align: center;
 }
 
-.imagenPublicacion{
+.ImagenPublicacion{
     display: flex;
     padding: 1rem 3rem 1rem 3rem;
     justify-content: center;
@@ -106,13 +59,13 @@
 
 }
 
-.publicacion img{
+.Publicacion img{
     width: 800px;/*Renderizado de imagenes*/
     height: 500px;
     border-radius: 8px;
 }
 /*Texto publicaion*/
-.textoP{
+.TextoP{
     padding: 1rem 3rem 3rem 3rem;
     display: grid;
     border-radius: 0 0 1rem 1rem; /*Bordes redondeados*/
@@ -120,7 +73,7 @@
     background-color: var(--fondoPublicacion);
 
 }
-.textoPublicacion{
+.TextoPublicacion{
     width: 50rem;
     background-color: var(--fondoTexto);
     padding: 1rem 1rem 1rem 1rem;
@@ -130,7 +83,38 @@
     /*background-color: var(--fondoPublicacion);*/
 }
 
-.textoPublicacion p{
-    font-size: auto;
-    text-align: justify;
+/* INPUTS */
+
+.LetrasInput{
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+    border-radius: 6px;
+    border: none;
+    resize: none; /* No se puede redimensionar */
+    overflow-y: hidden;
+}
+
+.IntTitulo{
+    padding-top: 8px;
+    resize: none; /* No se puede redimensionar */
+    width: 800px; /* Ancho del input */
+    height: auto; /* Alto del input */
+    font-size: 26px;
+    text-align: center;
+}
+
+.IntSubtitulo{
+    padding-top: 8px;
+    resize: none; /* No se puede redimensionar */
+    width: 600px; /* Ancho del input */
+    height: auto; /* Alto del input */
+    font-size: 20px;
+    text-align: center;
+}
+
+.Descripcion{
+    padding-top: 8px;
+    resize: none; /* No se puede redimensionar */
+    width: 800px; /* Ancho del input */
+    height: auto; /* Alto del input */
 }
