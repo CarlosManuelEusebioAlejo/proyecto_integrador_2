@@ -438,3 +438,15 @@ body{
   .texto{
     text-align: center;
   }
+
+  .btn-a{
+    text-decoration: none; /* Eliminar subrayado del texto */
+    color: inherit; /* Heredar color del texto */
+    background-color: transparent; /* Fondo transparente */
+    border: none; /* Sin borde */
+    padding: 0; /* Sin relleno */
+    margin: 0; /* Sin margen */
+    font: inherit; /* Heredar fuente y tamaño de texto */
+    cursor: pointer; /* Cambiar cursor a puntero al pasar sobre el enlace */
+    outline: none; /* Sin contorno al hacer clic */
+}
