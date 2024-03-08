@@ -65,15 +65,15 @@
           <div class="TextoP">
             <div class="TextoPublicacion">
               <textarea class="LetrasInput Descripcion" placeholder="Ingresa una descripcion..." name="Descripcion" id="Descripcion" cols="30" rows="10" id="CuadroTextosAjustables"></textarea>
-                <!-- <p>aadipiscipiscing elit. Aenean commodo ligula eadipiscipiscing elit. Aenean commodo ligula eadipiscipiscing elit. Aenean commodadipiscipiscing elit. Aenean commodo ligula eadipiscipiscing elit. Aenean commodo ligula eadipiscipiscing elit. Aenean commodo ligula eadipiscipiscing elit. Aenean commodo ligula eadipiscipiscing elit. Aenean commodo ligula eadipiscipiscing elit. Aenean commodo ligula eadipiscipiscing elit. Aenean commodo ligula eadipiscipiscing elit. Aenean commodo ligula eadipiscipiscing elit. Aenean commodo ligula eadipiscipiscing elit. Aenean commodo ligula eadipiscipiscing elit. Aenean commodo ligula eadipiscipiscing elit. Aenean commodo ligula eadipiscipiscing elit. Aenean commodo ligula eo ligula e    dipiscipiscing elit. Aenean commodo ligula eget iing elit. Aenean commodo ligula eget ipiscing elit. Aenean commodo ligula eget dolor. Ac, commodo ligula eget dol elit. Aenean commodo ligula eget dolor. Ac, commodo ligula egetdolor. Ac, commodo ligula eget dol elit. Aenean commodo ligula eget dolor. Ac, commodo ligula eget d </p> -->
             </div>
           </div>
         </div>
         <!--Publicaciones----------------------------------------------------------------->
         <!-------------------------------------------------------------------------------->
-        <div class="btn-eliminarImagen">
-                <button class="btn btn-secondary" id="btnEliminar">Publicar</button>
-              </div>
+        <div class="bottonConfirmar">
+            <button class="btn btn-success" id="btnEliminar">Publicar</button>
+            <button id="regresar" type="button" class="btn btn-secondary"><a href="interfaceAdmin.php" class="btn-a">Cancelar</a></button>
+        </div>
       </section><!--menu-publicaciones-->
     </form><!--sub-menu2-->
   </div><!--menu-principal-->
