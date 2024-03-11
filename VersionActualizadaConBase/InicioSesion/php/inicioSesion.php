@@ -9,7 +9,7 @@
 
     if(mysqli_num_rows($validar_login) > 0)
     {
-        header("location: http://localhost/proyecto_integrador_2-feature-Eusebio/Interfases.php/interfaceAdmin.php");
+        header("location: http://localhost/VersionActualizadaConBase/Interfaces.php/interfaceAdmin.php");
         exit;
     }
     else

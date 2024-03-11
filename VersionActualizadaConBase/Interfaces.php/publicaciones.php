@@ -12,8 +12,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>VitalLife</title>
-    <link rel="stylesheet" href="csspublicaciones/style.css">
-    <link rel="stylesheet" href="csspublicaciones/fontello.css">
+    <link rel="stylesheet" href="css_publicaciones/style.css">
+    <link rel="stylesheet" href="css_publicaciones/fontello.css">
 </head>
 <body>
     <header class="header">
