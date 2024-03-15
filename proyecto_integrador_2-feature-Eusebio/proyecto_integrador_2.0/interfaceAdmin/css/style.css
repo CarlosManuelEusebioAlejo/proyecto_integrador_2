@@ -23,7 +23,7 @@
 }  
 
 body{
-    background-color: #fff;
+    background-color: rgb(255, 255, 246);
 }
 
 .header{
@@ -31,8 +31,9 @@ body{
     height: 70px;
     position: fixed;
     top: 0;
-    left: 0;;
-    background-color: #51829B;
+    left: 0;
+    background-color: #50727B;
+    border-radius: 10px;
     z-index: 100;
 }
 
@@ -65,6 +66,7 @@ body{
 
 .logo{
     color: white;
+    font-size: 25px;
     font-weight: 400;
     font-size: 22px;
     margin-top: 20px;
@@ -114,21 +116,20 @@ body{
     visibility: hidden;
 }
 
-.carrusel-content{
+.carrusel-contenido{
     justify-content: center;
-    border-radius: 100px;
+    /* border-radius: 100px; */
 }
 
+/* .carrusel-content{
+    border-radius: 100%;
+} */
+
 .carrusel{
-    display: flex;
     justify-content: center;
-    position: static;
-    z-index: 1;
     margin: auto;
-    margin-top: 140px;
-    margin-bottom: 300px;
-    width: 900px;
-    height: 300px;
+    margin-top: 100px;
+    margin-bottom: 70px;
     /* border-radius: 100px; */
 }
 
@@ -143,4 +144,26 @@ body{
 .dropdown-menu{
     position: absolute;
     /* color: white; */
+}
+
+.titulo{
+    font-size: 60px;
+    text-align: center;
+}
+
+.pendejada{
+    text-align: end;
+    margin-top: 15px;
+    margin-bottom: -10px;
+}
+
+hr{
+    background-color: #50727B;
+}
+
+@media (max-width: 1325px){
+    #pub-container{
+        display: flex;
+        background: black;
+    }
 }
