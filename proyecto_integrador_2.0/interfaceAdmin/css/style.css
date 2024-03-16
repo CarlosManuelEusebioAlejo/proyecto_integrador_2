@@ -28,8 +28,9 @@ body{
 
 .header{
     width: 100%;
-    height: 70px;
+    height: 60px;
     position: fixed;
+    margin-bottom: -10px;
     top: 0;
     left: 0;
     background-color: #50727B;
@@ -146,4 +147,18 @@ body{
     text-align: end;
     margin-top: 15px;
     margin-bottom: -10px;
+}
+
+.text-carrusel{
+    /* color: #50727B; */
+    font-size: 100px;
+    top: 50%;
+    /* margin-top: 430px;; */
+}
+
+.text-outline {
+    -webkit-text-fill-color: transparent; /* Hace que el texto sea transparente */
+    -webkit-text-stroke: 1px black; /* Agrega un contorno de 1px al texto */
+    background-clip: text; /* Hace que el fondo solo se muestre donde esté el texto */
+    -webkit-background-clip: text; /* Para navegadores webkit (Chrome, Safari) */
 }

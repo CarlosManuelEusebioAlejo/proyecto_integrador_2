@@ -13,11 +13,11 @@
 </head>
 
 <body>
-    <header data-bs-theme="dark">
-        <nav class="navbar navbar-expand-md navbar-dark fixed-top " style="background-color: #51829B;">
+    <header class="header" data-bs-theme="dark">
+        <nav class="navbar navbar-expand-md navbar-dark fixed-top rounded-xl" style="background-color: #50727B;">
             <div class="container-fluid">
                 <h1>
-                    <a href="interfaceAdmin.html" class="navbar-brand logo"><b>VITAL LIFE</b></a>
+                    <a href="interfaceAdmin.html" class="navbar-brand logo"><b>VITAL LIFE</a>
                 </h1>
                 <button class="navbar-toggler collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
@@ -29,9 +29,9 @@
                         </li>
                         <li class="nav-item dropdown">
                             <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">Temas</a>
-                            <div class="dropdown-menu" style="background-color: #51829B;">
-                                <a class="dropdown-item" href="publicacionNutricion.php">Nutrición</a>
-                                <a class="dropdown-item" href="publicacionSalud.php">Salud</a>
+                            <div class="dropdown-menu" style="background-color: #50727B;">
+                                <a class="dropdown-item" href="publicacionNutricion.php"><b>Nutrición</b></a>
+                                <a class="dropdown-item" href="publicacionSalud.php"><b>Salud</b></a>
                             </div>
                         </li>
                         <li class="nav-item">
@@ -57,26 +57,27 @@
                         <div class="carousel-item active">
                             <img src="https://www.shutterstock.com/image-vector/healthy-organic-diet-nutrition-vector-600nw-1433732030.jpg" class="w-full h-200 object-cover blur-8" alt="...">
                             <div class="carousel-caption d-none d-md-block text-white rounded-lg p-4 absolute inset-0 flex items-center justify-center">
-                                <h5>First slide label</h5>
+                                <h1 class="text-carrusel text-white text-outline"><b>First slide label</b></h1>
                             </div>
                         </div>
                         <div class="carousel-item">
                             <img src="https://www.shutterstock.com/image-vector/healthy-organic-diet-nutrition-vector-600nw-1433732030.jpg" class="w-full h-200 object-cover blur-8" alt="...">
                             <div class="carousel-caption d-none d-md-block text-white rounded-lg p-4 absolute inset-0 flex items-center justify-center">
-                                <h5>Second slide label</h5>
+                                <h1 class="text-carrusel text-white text-outline"><b>Second slide label</b></h1>
                             </div>
                         </div>
                         <div class="carousel-item">
                             <img src="https://www.shutterstock.com/image-vector/healthy-organic-diet-nutrition-vector-600nw-1433732030.jpg" class="w-full h-200 object-cover blur-8" alt="...">
                             <div class="carousel-caption d-none d-md-block text-white rounded-lg p-4 absolute inset-0 flex items-center justify-center">
-                                <h5>Third slide label</h5>
+                                <h1 class="text-carrusel text-white text-outline"><b>Third slide label</b></h1>
                             </div>
                         </div>
                         <div class="carousel-item">
                             <img src="https://www.shutterstock.com/image-vector/healthy-organic-diet-nutrition-vector-600nw-1433732030.jpg" class="w-full h-200 object-cover blur-8" alt="...">
                             <div class="carousel-caption d-none d-md-block text-white rounded-lg p-4 absolute inset-0 flex items-center justify-center">
-                                <h5>Fourth slide label</h5>
+                                <h1 class="text-carrusel text-white text-outline"><b>Fourth slide label</b></h1>
                             </div>
+                            <!-- class="text-carrusel text-black text-stroke-1 bg-clip-text" -->
                         </div>
                     </div>
                     <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
@@ -96,39 +97,40 @@
 
     <section id="blog-posts" class="mt-5">
         <div class="shadow.lg p-5 mb-5 w-auto mt-5 rounded-lg" id="pub-container">
-            <h2 class="titulo"><b>SALUD</b></h2>
+            <h2 class="titulo"><b>NUTRICIÓN</h2>
             <div class="container">
                 <div class="row row-cols-1 row-cols-md-3 g-4 ">
+
                     <!-- Tarjetas de publicaciones de salud -->
-                    <div class="card mb-3 bg-gray-100 rounded-lg border border-solid border-black">
-                        <img class="rounded-t-lg w-auto h-auto object-cover" src="https://images.ecestaticos.com/TswqyauFgUGwvvWA8CQRHwgeo4s=/0x0:2272x1515/1200x900/filters:fill(white):format(jpg)/f.elconfidencial.com%2Foriginal%2Fd01%2Ff3a%2Fb38%2Fd01f3ab3833e9cfc7e49d451841fd8d3.jpg" alt="Imágen de Publicación">
+                    <div class="card mb-3 bg-black-100 rounded-lg border border-solid border-black">
+                        <img class="rounded-t-lg w-full h-30 object-cover" src="https://images.ecestaticos.com/TswqyauFgUGwvvWA8CQRHwgeo4s=/0x0:2272x1515/1200x900/filters:fill(white):format(jpg)/f.elconfidencial.com%2Foriginal%2Fd01%2Ff3a%2Fb38%2Fd01f3ab3833e9cfc7e49d451841fd8d3.jpg" alt="Imágen de Publicación">
                         <div class="p-5">
                             <h3 class="text-xl font-semibold mb-2 text-center">Tips para bajar de peso</h3>
-                            <p class="text-gray-700 mb-3 text-justify">Los "tips para bajar de peso" son consejos y estrategias destinadas a ayudar a las personas a reducir su peso corporal de manera saludable. Incluyen recomendaciones sobre hábitos alimenticios, actividad física, hidratación, descanso y gestión del estrés. Estos consejos suelen enfocarse en cambios graduales y sostenibles en el estilo de ....</p>
-                            <!-- <a href="#" class="inline-block bg-blue-500 text-white font-bold py-2 px-4 rounded hover:bg-blue-700">Escoger tema</a> -->
+                            <p class="text-black mb-3 text-justify">Los "tips para bajar de peso" son consejos y estrategias destinadas a ayudar a las personas a reducir su peso corporal de manera saludable. Incluyen recomendaciones sobre hábitos alimenticios, actividad física, hidratación, descanso y gestión del estrés. Estos consejos suelen enfocarse en cambios graduales y sostenibles en el estilo de ....</p>
+                            <!-- <a href="#" class="inline-block bg-blue-500 text-white font-bold py-2 px-4 rounded hover:bg-blue">Escoger tema</a> -->
                         </div>
                     </div>
 
-                    <div class="card mb-3 bg-gray-100 rounded-lg border border-solid border-black">
-                        <img class="rounded-t-lg w-auto h-auto object-cover" src="https://i.blogs.es/1e83cf/sven-mieke-optbc2fxcfc-unsplash/1366_2000.jpg" alt="Imágen de Publicación">
+                    <div class="card mb-3 bg-black-100 rounded-lg border border-solid border-black">
+                        <img class="rounded-t-lg w-full h-30 object-cover" src="https://i.blogs.es/1e83cf/sven-mieke-optbc2fxcfc-unsplash/1366_2000.jpg" alt="Imágen de Publicación">
                         <div class="p-5">
                             <h3 class="text-xl font-semibold mb-2 text-center">Musculación para bajar de peso</h3>
-                            <p class="text-gray-700 mb-4 text-justify">La "musculación para bajar de peso" implica el uso de entrenamiento de fuerza y resistencia para quemar calorías, aumentar la masa muscular y acelerar el metabolismo, lo que puede contribuir a la pérdida de peso. Este enfoque no solo busca la reducción de grasa corporal, sino también el aumento de la masa muscular magra, lo que puede....</p>
-                            <!-- <a href="#" class="inline-block bg-blue-500 text-white font-bold py-2 px-4 rounded hover:bg-blue-700">Escoger tema</a> -->
+                            <p class="text-black mb-4 text-justify">La "musculación para bajar de peso" implica el uso de entrenamiento de fuerza y resistencia para quemar calorías, aumentar la masa muscular y acelerar el metabolismo, lo que puede contribuir a la pérdida de peso. Este enfoque no solo busca la reducción de grasa corporal, sino también el aumento de la masa muscular magra, lo que puede....</p>
+                            <!-- <a href="#" class="inline-block bg-blue-500 text-white font-bold py-2 px-4 rounded hover:bg-blue">Escoger tema</a> -->
                         </div>
                     </div>
 
-                    <div class="card mb-3 bg-gray-100 rounded-lg border border-solid border-black">
-                        <img class="rounded-t-lg w-auto h-auto object-cover" src="https://www.paho.org/sites/default/files/alimentacao-saudavel-diversificada.jpg" alt="Imágen de Publicación">
+                    <div class="card mb-3 bg-black-100 rounded-lg border border-solid border-black">
+                        <img class="rounded-t-lg w-full h-30 object-cover" src="https://www.paho.org/sites/default/files/alimentacao-saudavel-diversificada.jpg" alt="Imágen de Publicación">
                         <div class="p-5">
                             <h3 class="text-xl font-semibold mb-2 text-center">Alimentación según papers cientificos</h3>
-                            <p class="text-gray-700 mb-4 text-justify">La alimentación según papers científicos aborda la investigación y el análisis de diversos aspectos relacionados con la nutrición humana, basándose en estudios científicos publicados. Estos papers exploran temas como la influencia de la dieta en la salud, los efectos de diferentes nutrientes en el organismo, las tendencias alimentarias...</p>
-                            <!-- <a href="#" class="inline-block bg-blue-500 text-white font-bold py-2 px-4 rounded hover:bg-blue-700">Escoger tema</a> -->
+                            <p class="text-black mb-4 text-justify">La alimentación según papers científicos aborda la investigación y el análisis de diversos aspectos relacionados con la nutrición humana, basándose en estudios científicos publicados. Estos papers exploran temas como la influencia de la dieta en la salud, los efectos de diferentes nutrientes en el organismo, las tendencias alimentarias...</p>
+                            <!-- <a href="#" class="inline-block bg-blue-500 text-white font-bold py-2 px-4 rounded hover:bg-blue">Escoger tema</a> -->
                         </div>
                     </div>
                 </div>
                 <div class="pendejada">
-                    <a href="salud-archivos/salud.html" class="inline-block bg-blue-500 text-white font-bold py-2 px-4 rounded hover:bg-blue-700">Ver más</a>
+                    <a href="salud-archivos/salud.html" class="inline-block bg-blue-500 text-white font-bold py-2 px-4 rounded hover:bg-blue">Ver más</a>
                 </div>
             </div>
 
@@ -136,39 +138,41 @@
         <hr class="border-t-8 w-1/2 mx-auto">
 
         <div class="shadow.lg p-5 mb-5 w-auto mt-5 rounded-lg" id="pub-container">
-            <h2 class="titulo"><b>SALUD</b></h2>
+            <h2 class="titulo"><b>SALUD</h2>
             <div class="container">
-                <div class="row row-cols-1 row-cols-md-3 g-4">
+                <div class="row row-cols-1 row-cols-md-3">
+
                     <!-- Tarjetas de publicaciones de salud -->
-                    <div class="card mb-3 bg-gray-100 rounded-lg border border-solid border-black">
-                        <img class="rounded-t-lg w-auto h-auto object-cover" src="https://images.ecestaticos.com/TswqyauFgUGwvvWA8CQRHwgeo4s=/0x0:2272x1515/1200x900/filters:fill(white):format(jpg)/f.elconfidencial.com%2Foriginal%2Fd01%2Ff3a%2Fb38%2Fd01f3ab3833e9cfc7e49d451841fd8d3.jpg" alt="Imágen de Publicación">
+                    <div class="card mb-3 bg-black-100 rounded-lg border border-solid border-black">
+                        <img class="rounded-t-lg w-full h-30 object-cover" src="https://images.ecestaticos.com/TswqyauFgUGwvvWA8CQRHwgeo4s=/0x0:2272x1515/1200x900/filters:fill(white):format(jpg)/f.elconfidencial.com%2Foriginal%2Fd01%2Ff3a%2Fb38%2Fd01f3ab3833e9cfc7e49d451841fd8d3.jpg" alt="Imágen de Publicación">
                         <div class="p-5">
                             <h3 class="text-xl font-semibold mb-2 text-center">Tips para bajar de peso</h3>
-                            <p class="text-gray-700 mb-3 text-justify">Los "tips para bajar de peso" son consejos y estrategias destinadas a ayudar a las personas a reducir su peso corporal de manera saludable. Incluyen recomendaciones sobre hábitos alimenticios, actividad física, hidratación, descanso y gestión del estrés. Estos consejos suelen enfocarse en cambios graduales y sostenibles en el estilo de ....</p>
-                            <!-- <a href="#" class="inline-block bg-blue-500 text-white font-bold py-2 px-4 rounded hover:bg-blue-700">Escoger tema</a> -->
+                            <p class="text-black mb-3 text-justify">Los "tips para bajar de peso" son consejos y estrategias destinadas a ayudar a las personas a reducir su peso corporal de manera saludable. Incluyen recomendaciones sobre hábitos alimenticios, actividad física, hidratación, descanso y gestión del estrés. Estos consejos suelen enfocarse en cambios graduales y sostenibles en el estilo de ....</p>
+                            <!-- <a href="#" class="inline-block bg-blue-500 text-white font-bold py-2 px-4 rounded hover:bg-blue">Escoger tema</a> -->
                         </div>
                     </div>
 
-                    <div class="card mb-3 bg-gray-100 rounded-lg border border-solid border-black">
-                        <img class="rounded-t-lg w-auto h-auto object-cover" src="https://i.blogs.es/1e83cf/sven-mieke-optbc2fxcfc-unsplash/1366_2000.jpg" alt="Imágen de Publicación">
+                    <div class="card mb-3 bg-black-100 rounded-lg border border-solid border-black">
+                        <img class="rounded-t-lg w-full h-30 object-cover" src="https://i.blogs.es/1e83cf/sven-mieke-optbc2fxcfc-unsplash/1366_2000.jpg" alt="Imágen de Publicación">
                         <div class="p-5">
                             <h3 class="text-xl font-semibold mb-2 text-center">Musculación para bajar de peso</h3>
-                            <p class="text-gray-700 mb-4 text-justify">La "musculación para bajar de peso" implica el uso de entrenamiento de fuerza y resistencia para quemar calorías, aumentar la masa muscular y acelerar el metabolismo, lo que puede contribuir a la pérdida de peso. Este enfoque no solo busca la reducción de grasa corporal, sino también el aumento de la masa muscular magra, lo que puede....</p>
-                            <!-- <a href="#" class="inline-block bg-blue-500 text-white font-bold py-2 px-4 rounded hover:bg-blue-700">Escoger tema</a> -->
+                            <p class="text-black mb-4 text-justify">La "musculación para bajar de peso" implica el uso de entrenamiento de fuerza y resistencia para quemar calorías, aumentar la masa muscular y acelerar el metabolismo, lo que puede contribuir a la pérdida de peso. Este enfoque no solo busca la reducción de grasa corporal, sino también el aumento de la masa muscular magra, lo que puede....</p>
+                            <!-- <a href="#" class="inline-block bg-blue-500 text-white font-bold py-2 px-4 rounded hover:bg-blue">Escoger tema</a> -->
                         </div>
                     </div>
 
-                    <div class="card mb-3 bg-gray-100 rounded-lg border border-solid border-black">
-                        <img class="rounded-t-lg w-auto h-auto object-cover" src="https://www.paho.org/sites/default/files/alimentacao-saudavel-diversificada.jpg" alt="Imágen de Publicación">
+                    <div class="card mb-3 bg-black-100 rounded-lg border border-solid border-black">
+                        <img class="rounded-t-lg w-full h-30 object-cover" src="https://www.paho.org/sites/default/files/alimentacao-saudavel-diversificada.jpg" alt="Imágen de Publicación">
                         <div class="p-5">
                             <h3 class="text-xl font-semibold mb-2 text-center">Alimentación según papers cientificos</h3>
-                            <p class="text-gray-700 mb-4 text-justify">La alimentación según papers científicos aborda la investigación y el análisis de diversos aspectos relacionados con la nutrición humana, basándose en estudios científicos publicados. Estos papers exploran temas como la influencia de la dieta en la salud, los efectos de diferentes nutrientes en el organismo, las tendencias alimentarias...</p>
-                            <!-- <a href="#" class="inline-block bg-blue-500 text-white font-bold py-2 px-4 rounded hover:bg-blue-700">Escoger tema</a> -->
+                            <p class="text-black mb-4 text-justify">La alimentación según papers científicos aborda la investigación y el análisis de diversos aspectos relacionados con la nutrición humana, basándose en estudios científicos publicados. Estos papers exploran temas como la influencia de la dieta en la salud, los efectos de diferentes nutrientes en el organismo, las tendencias alimentarias...</p>
+                            <!-- <a href="#" class="inline-block bg-blue-500 text-white font-bold py-2 px-4 rounded hover:bg-blue">Escoger tema</a> -->
                         </div>
                     </div>
                 </div>
+
                 <div class="pendejada">
-                    <a href="salud-archivos/salud.html" class="inline-block bg-blue-500 text-white font-bold py-2 px-4 rounded hover:bg-blue-700">Ver más</a>
+                    <a href="salud-archivos/salud.html" class="inline-block bg-blue-500 text-white font-bold py-2 px-4 rounded hover:bg-blue">Ver más</a>
                 </div>
             </div>
 
