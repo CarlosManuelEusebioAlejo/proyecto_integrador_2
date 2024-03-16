@@ -164,6 +164,7 @@ hr{
 @media (max-width: 1325px){
     #pub-container{
         display: flex;
+        width: 43%;
         background: black;
     }
 }
