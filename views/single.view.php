@@ -1,0 +1,20 @@
+<?php require 'views/header.php'; ?>
+
+<a href="index.php" class="btn btn-primary btn-lg mb-4">Volver</a>
+    <div class="contenedor">
+        <div class="post">
+            <article>
+                <h2 class="titulo"><?php echo $post['titulo']; ?></h2>
+                <p class="autor">Autor: <a class="text-decoration-none text-dark" href="<?php echo RUTA ?>perfil.php?usuario=<?php echo $post['creador']; ?>"><?php echo $post['creador']; ?></a></p>
+                <p class="tema">Tema: <?php echo $post['tema'];?></p>
+                <p class="fecha"><?php echo fecha($post['fecha']); ?></p>
+                <div class="thumb">
+                        <img src="<?php echo RUTA; ?>/imagenes/<?php echo $post['thumb']; ?>" alt="<?php echo $post['titulo']; ?>">
+                </div>
+                <p class="extracto"><?php echo nl2br($post['texto']); ?></p>
+            </article>
+        </div>
+
+    </div>
+
+<?php require 'footer.php'; ?>

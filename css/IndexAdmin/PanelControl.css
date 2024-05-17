@@ -1,0 +1,92 @@
+
+:root{
+    --fontPrimary: "Montserrat", sans-serif;
+}
+
+.migajas-pan{
+    font-size: 15px;
+    font-weight: lighter;
+    color: rgba(170, 170, 170, 0.681);
+}
+.bienvenida{
+    font-size: 35px;
+}
+.Texto{
+    font-size: 20px;
+    /* font-weight: lighter; */
+    /* color: rgba(170, 170, 170, 0.681); */
+    font-family: var(--fontPrimary);
+}
+.panel{
+    font-size: 35px;
+    font-family: var(--fontPrimary);
+}
+
+
+@media (min-width: 768px) {
+    .migajas-pan{
+        font-size: 10px;
+    }
+    .bienvenida{
+        font-size: 50px;
+    }
+    .Texto{
+        font-size: 25px;
+    }
+    .panel{
+        font-size: 50px;
+    }
+    
+}
+
+
+/* Inputs de filtros */
+.Inputs {
+    appearance: none;
+    width: 20px;
+    height: 20px;
+    border: 2px solid #30cfd0;
+    border-radius: 5px;
+    background-color: transparent;
+    display: inline-block;
+    position: relative;
+    margin-right: 10px;
+    cursor: pointer;
+  }
+  
+  .Inputs:before {
+    content: "";
+    background-color: #30cfd0;
+    display: block;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(0);
+    width: 10px;
+    height: 10px;
+    border-radius: 3px;
+    transition: all 0.3s ease-in-out;
+  }
+  
+  .Inputs:checked:before {
+    transform: translate(-50%, -50%) scale(1);
+  }
+
+  .Labels {
+    font-size: 18   px;
+    cursor: pointer;
+    user-select: none;
+    display: flex;
+    align-items: center;
+  }
+  .Fila-Filtros-ActInac{
+    margin-right: 20px;
+    margin-bottom: 10px;
+  }
+
+
+  .grid-container{
+    grid-template-columns: repeat(auto-fill, 
+                                    minmax(150px, 1fr));
+    width: 100%;    
+  }
