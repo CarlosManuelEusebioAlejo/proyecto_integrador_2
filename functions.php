@@ -73,9 +73,8 @@ function obtener_post_pendientes($conexion) {
 
 
 //funcion para obtener publicaciones de un editor en particular
-function obtener_post_editor($post_por_pagina, $conexion, $editor){
-    $inicio = (pagina_actual() > 1) ? pagina_actual() * $post_por_pagina - $post_por_pagina : 0;
-    $sentencia = $conexion ->prepare("SELECT SQL_CALC_FOUND_ROWS * FROM publicaciones WHERE creador = '$editor' LIMIT $inicio, $post_por_pagina");
+function obtener_post_editor($conexion, $editor){
+    $sentencia = $conexion ->prepare("SELECT SQL_CALC_FOUND_ROWS * FROM publicaciones WHERE id_usuario = '$editor' ORDER BY fecha DESC");
     $sentencia -> execute();
     return $sentencia->fetchAll();
 }

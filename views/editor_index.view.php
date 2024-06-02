@@ -22,28 +22,12 @@ require '../views/header.php'; ?>
                             </small>
                         </div>
                         <div class="container d-flex justify-content-center mt-4">
-                            <a href=<?php echo RUTA . 'views/admin_panel_publicaciones.php'?> class="btn btn-primary float-end"><i class="bi bi-arrow-right-square"></i> Entar</a>
+                            <a href=<?php echo RUTA . 'views/editor_panel_publicaciones.php'?> class="btn btn-primary float-end"><i class="bi bi-arrow-right-square"></i> Entar</a>
                         </div>
                     </div>
                 </div>
             </div>
-            <div class="row mb-3">
-                <div class="col mb-3">
-                    <div class="p-3 border bg-light position-relative">
-                        <h4 class="Texto">Ver mis publicaciones</h4>
-                        <div class="m-1">
-                            <small>
-                             En esta sección podrás ver todas las publicaciones del blog,
-                             seccionadas por filtros para que así sea más fácil su visualización, 
-                             en la cual podrás aceptar, rechazar, activar y desactivar las publicaciones.  
-                            </small>
-                        </div>
-                        <div class="container d-flex justify-content-center mt-4">
-                            <a href=<?php echo RUTA . 'views/admin_panel_publicaciones.php'?> class="btn btn-primary float-end"><i class="bi bi-arrow-right-square"></i> Entar</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
+
             
             <!-- Administrar .... -->
 
@@ -78,6 +62,5 @@ require '../views/header.php'; ?>
 </section>
 <br>
 
-<?php // require '../paginacion.php'; ?>
 
-<?php require '../views/footer.php'; ?>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>

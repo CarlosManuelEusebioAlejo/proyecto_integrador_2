@@ -20,7 +20,7 @@ if (!$conexion){
 }
 
 // Get the posts from the database
-$posts = obtener_post_editor($blog_config['post_por_pagina'], $conexion, $_SESSION['editor']);
+$posts = obtener_post_editor($conexion, $_SESSION['editor']);
 
 // Include the editor index view
 require '../views/editor_index.view.php';

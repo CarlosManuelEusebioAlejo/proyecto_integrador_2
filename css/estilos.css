@@ -15,9 +15,7 @@ body {
 
 
 
-body {
-    padding-top: 70px; /* Ajusta el valor según la altura de tu header para evitar superposición */
-}
+
 
 h1, h2, h3, h4, h5, h6 {
 	font-family: "Oswald", Arial, Sans-serif;
@@ -51,12 +49,10 @@ a:hover {
 
 header {
 	color:#050b60;
-	margin-bottom: 30px;
 	background: #063251;
-    position: fixed;
     top: 0;
     width: 100%;
-    z-index: 1000; /* Asegúrate de que el header esté por encima de otros elementos */
+    z-index: 1000;
 
 
 }

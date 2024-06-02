@@ -5,17 +5,17 @@
         <article>
             <h2 class="titulo">Editar articulo</h2>
             <form class="formulario" method="post" enctype="multipart/form-data" action="<?php echo htmlspecialchars($_SERVER['PHP_SELF']); ?>">
-                <input type="hidden" name="id" value="<?php echo $post['id']; ?>">
-                <input type="text" name="titulo" value="<?php echo $post['titulo']; ?>">
+                <input type="hidden" name="id" value="<?php echo $posts['id']; ?>">
+                <input type="text" name="titulo" value="<?php echo $posts['titulo']; ?>">
                 <select name="tema" id="" class="boton">
-                    <option value="Nutrición" <?php if ($post['tema'] == "Salud") echo "selected"; ?>>Nutrición</option>
-                    <option value="Salud" <?php if ($post['tema'] == "Bienestar") echo "selected"; ?>>Salud</option>
+                    <option value="Nutrición" <?php if ($posts['tema'] == "Nutrición") echo "selected"; ?>>Nutrición</option>
+                    <option value="Deporte" <?php if ($posts['tema'] == "Deporte") echo "selected"; ?>>Deporte</option>
                 </select>
 
-                <input type="text" name="extracto" value="<?php echo $post['extracto']; ?>">
-                <textarea name="texto"><?php echo $post['texto']; ?></textarea>
+                <input type="text" name="extracto" value="<?php echo $posts['extracto']; ?>">
+                <textarea name="texto"><?php echo $posts['texto']; ?></textarea>
                 <input type="file" name="thumb">
-                <input type="hidden" name="thumb-guardada" value="<?php echo $post['thumb']; ?>">
+                <input type="hidden" name="thumb-guardada" value="<?php echo $posts['thumb']; ?>">
 
                 <input type="submit" value="Modificar Articulo">
             </form>

@@ -27,14 +27,14 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     if(empty($thumb['name'])){
         $thumb = $thumb_guardada;
     }else{
-        $archivo_subido = '../' . $blog_config['carpeta_imagenes'] . $_FILES['thumb']['name'];
-        move_uploaded_file($_FILES['thumb'] ['tmp_name'], $archivo_subido);
-        $thumb = $_FILES['thumb']['name'];
+        $archivo_subido = '../' . $blog_config['carpeta_imagenes'] . $thumb_guardada; // Se usa el nombre de la imagen guardada
+        move_uploaded_file($thumb['tmp_name'], $archivo_subido);
+        $thumb = $thumb_guardada; // Se mantiene el nombre de la imagen guardada
     }
 
     #se prepara la consulta para actualizar la publicacion
     $statement = $conexion->prepare(
-        'UPDATE publicaciones SET titulo = :titulo, tema = :tema, extracto = :extracto, texto = :texto, thumb = :thumb WHERE id = :id'
+        'UPDATE publicaciones SET titulo = :titulo, tema = :tema, extracto = :extracto, texto = :texto, thumb = :thumb, status = "pendiente" WHERE id = :id'
     );
 
     #se actualiza la publicacion
@@ -48,7 +48,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     ));
 
     #se redirige al admin
-    header('Location: ' . RUTA . '/editor');
+    header('Location: ' . RUTA . '/views/editor_panel_publicaciones.php');
 } else {
     #si no se ha enviado el formulario, se obtiene el id del articulo a editar
     $id_articulo = id_articulo($_GET['id']);

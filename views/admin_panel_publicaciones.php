@@ -16,7 +16,6 @@ $conexion = conexion($bd_config);
 $posts = obtener_post_filtro( $conexion);
 ?>
 
-
     <section class="container mt-5 w-75">
 
         <h4 class="migajas-pan">Panel de Control > Administrar Publicaciones</h4>
@@ -80,7 +79,7 @@ $posts = obtener_post_filtro( $conexion);
                 <table class="table table-striped">
                     <thead>
                         <tr>
-                        <th scope="col">Status</th>
+                        <th scope="col">Id</th>
                         <th scope="col">Titulo</th>
                         <th scope="col">Nombre Usuario</th>
                         <th class="d-flex justify-content-center" scope="col"> <i class="bi bi-gear"></i> </th>
@@ -92,7 +91,7 @@ $posts = obtener_post_filtro( $conexion);
                             <?php foreach ($posts as $post): ?>
                                 <?php if ($post['status'] == 'activo'): ?>
                                     <tr class="activas table-success border-success">
-                                        <th scope="row"><?php echo $post['status']; ?></th>
+                                        <th scope="row"><?php echo $post['id']; ?></th>
                                         <td><?php echo $post['titulo']; ?></td>
                                         <td><?php echo $post['creador']; ?></td>
                                         <td>
@@ -118,7 +117,7 @@ $posts = obtener_post_filtro( $conexion);
                             <?php foreach ($posts as $post): ?>
                                 <?php if ($post['status'] == 'inactivo'): ?>
                                         <tr class="inactivas table-secondary border-secondary">
-                                        <th scope="row"><?php echo $post['status'];?></th>
+                                        <th scope="row"><?php echo $post['id'];?></th>
                                         <td><?php echo $post['titulo'] ;?></td>
                                         <td><?php echo $post['creador'];?></td>
                                         <td>
@@ -144,7 +143,7 @@ $posts = obtener_post_filtro( $conexion);
                             <?php foreach ($posts as $post): ?>
                                 <?php if ($post['status'] == 'pendiente'): ?>
                                     <tr class="pendientes table-warning border-warning">
-                                        <th scope="row"><?php echo $post['status'];?></th>
+                                        <th scope="row"><?php echo $post['id'];?></th>
                                         <td><?php echo $post['titulo'];?></td>
                                         <td><?php echo $post['creador'];?></td>
                                         <td>
@@ -174,7 +173,7 @@ $posts = obtener_post_filtro( $conexion);
                                 <?php foreach ($posts as $post): ?>
                                 <?php if ($post['status'] == 'rechazado'): ?>
                                     <tr class="rechazadas table-danger border-danger">
-                                    <th scope="row"><?php echo $post['status'];?></th>
+                                    <th scope="row"><?php echo $post['id'];?></th>
                                     <td><?php echo $post['titulo'];?></td>
                                     <td><?php echo $post['creador'];?></td>
                                     <td>
@@ -209,6 +208,8 @@ $posts = obtener_post_filtro( $conexion);
         <!-- <a href="admin_index.view.php" class="btn btn-primary btn-lg mb-4">Volver</a> -->
 </section>
 
+
+<!-- marca todas las casillas -->
 <script>
     document.addEventListener("DOMContentLoaded", function() {
         // Obtener los checkboxes
@@ -229,6 +230,8 @@ $posts = obtener_post_filtro( $conexion);
     });
 </script>
 
+
+<!-- Muestra solo las casillas que esten seleccionadas -->
 <script>
     // Función para manejar el cambio en los checkboxes
     function filtrarPublicaciones() {
@@ -264,6 +267,8 @@ $posts = obtener_post_filtro( $conexion);
 </script>
 
 <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
+<!-- Pregunta si quieres aprobar la publicacion -->
 <script>
 document.addEventListener("DOMContentLoaded", function() {
     // Busca todos los elementos <a> con la clase "aprobar"
@@ -306,6 +311,8 @@ document.addEventListener("DOMContentLoaded", function() {
 });
 </script>
 
+
+<!-- Pregunta si quires rechazar la publicacion -->
 <script>
 document.addEventListener("DOMContentLoaded", function() {
     // Busca todos los elementos <a> con la clase "aprobar"
@@ -348,6 +355,7 @@ document.addEventListener("DOMContentLoaded", function() {
 });
 </script>
 
+<!-- Pregunta si quirres desactivar una publicacion -->
 <script>
 document.addEventListener("DOMContentLoaded", function() {
     // Busca todos los elementos <a> con la clase "aprobar"
@@ -377,7 +385,7 @@ document.addEventListener("DOMContentLoaded", function() {
                 if (result.isConfirmed) {
                     Swal.fire({
                         title: "¡Aceptada!",
-                        text: "La publicación ahora es visible para todos.",
+                        text: "Ahora la publicaciíon esta desactivada.",
                         icon: "success"
                     }).then(() => {
                         // Redirecciona a la URL especificada después de confirmar

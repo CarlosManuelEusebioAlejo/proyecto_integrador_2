@@ -1,3 +1,46 @@
+<?php
+$bd_cnfig = array(
+    'basedatos' => 'blog_web',
+    'usuario' => 'root',
+    'pass' => ''
+);
+
+
+
+function coexion($bd_config){
+    try {
+        // Creating a new PDO object to connect to the database
+        $conexion = new PDO('mysql:host=localhost;dbname='.$bd_config['basedatos'], $bd_config['usuario'], $bd_config['pass']);
+        return $conexion;
+    }catch (PDOExeption $e) {
+        return false;
+    }
+}
+
+function obtener_usuaro_por_id($conexion, $id_usuario){
+    // Check if the provided input is numeric (indicating ID) or string (indicating username)
+    if (is_numeric($id_usuario)) {
+        // If the input is numeric, assume it's an ID and search by ID
+        $statement = $conexion->prepare("SELECT * FROM usuarios WHERE id = :id LIMIT 1");
+        $statement->execute(array(':id' => $id_usuario));
+    } else {
+        // If the input is not numeric, assume it's a username and search by username
+        $statement = $conexion->prepare("SELECT * FROM usuarios WHERE usuario = :usuario LIMIT 1");
+        $statement->execute(array(':usuario' => $id_usuario));
+    }
+    return $statement->fetch();
+}
+
+
+
+$coexion = coexion($bd_cnfig);
+// Get the post data from the database based on the article ID
+if(isset($_SESSION['id'])){
+    $photo = obtener_usuaro_por_id($coexion, $_SESSION['id']);
+}
+// $post = obtener_usuario_por_id($conexion, $_SESSION['id']);
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -20,8 +63,28 @@
     <link href="css/styleTime.css" rel="stylesheet"/>
 </head>
 <body>
+<style>
+  .dropdown-menu {
+    background-color: #040432; /* Color de fondo */
+    color: #ffffff; /* Color del texto */
+    border: 1px solid #454d55; /* Color del borde */
+  }
 
-<header class="p-3 mb-3 border-bottom" data-bs-theme="dark">
+  .dropdown-item {
+    color: #ffffff; /* Color del texto de los items */
+  }
+
+  .dropdown-item:hover {
+    background-color: #495057; /* Color de fondo al pasar el mouse */
+    color: #ffffff; /* Color del texto al pasar el mouse */
+  }
+
+  .dropdown-divider {
+    border-color: #6c757d; /* Color del divisor */
+  }
+</style>
+
+<header class="p-3" data-bs-theme="dark">
     <div class="container">
         <div class="d-flex flex-wrap align-items-center justify-content-center justify-content-lg-start">
             <a href="#" class="d-flex align-items-center mb-2 mb-lg-0 link-body-emphasis text-decoration-none">
@@ -48,14 +111,14 @@
             <?php if(isset($_SESSION['admin']) || isset($_SESSION['editor'])): ?>
                 <div class="dropdown text-end">
                     <a href="#" class="d-block link-body-emphasis text-decoration-none dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
-                        <img src="<?php echo RUTA; ?>/fotos_usuarios/default.jpg" alt="mdo" width="32" height="32" class="rounded-circle">
+                        <img src="https://prospectdirect.com/wp-content/uploads/2017/05/generic-profile-photo-2.png" alt="mdo" width="32" height="32" class="rounded-circle">
                     </a>
                     <ul class="dropdown-menu text-small">
-                        <li><a class="dropdown-item" href="<?php echo isset($_SESSION['admin']) ? RUTA . 'admin/nuevo.php' : RUTA . 'editor/nuevo.php'; ?>">New post</a></li>
-                        <li><a class="dropdown-item" href="<?php echo RUTA . 'login.php'; ?>">Panel</a></li>
-                        <li><a class="dropdown-item" href="#">Profile</a></li>
+                        <li><a class="dropdown-item" href="<?php echo isset($_SESSION['admin']) ? RUTA . 'admin/nuevo.php' : RUTA . 'editor/nuevo.php'; ?>"><i class="bi bi-plus-circle"></i> Nueva publicación</a></li>
+                        <li><a class="dropdown-item" href="<?php echo RUTA . 'login.php'; ?>"><i class="bi bi-toggles"></i> Panel</a></li>
+                        <li><a class="dropdown-item" href="<?php echo RUTA ?>perfil.php?usuario=<?php echo $photo['id']; ?>"><i class="bi bi-person-fill"></i> Perfil</a></li>
                         <li><hr class="dropdown-divider"></li>
-                        <li><a class="dropdown-item" href="<?php echo RUTA . 'admin/cerrar.php'; ?>">Cerrar Sesion</a></li>
+                        <li><a class="dropdown-item" href="<?php echo RUTA . 'admin/cerrar.php'; ?>"><i class="bi bi-box-arrow-left"></i> Cerrar Sesion</a></li>
                     </ul>
                 </div>
             <?php else: ?>

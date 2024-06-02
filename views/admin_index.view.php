@@ -22,7 +22,7 @@ require '../views/header.php'; ?>
                             </small>
                         </div>
                         <div class="container d-flex justify-content-center mt-4">
-                            <a href=<?php echo RUTA . 'views/admin_panel_publicaciones.php'?> class="btn btn-primary float-end"><i class="bi bi-arrow-right-square"></i> Entar</a>
+                            <a href=<?php echo RUTA . 'views/admin_panel_publicaciones.php'?> class="btn btn-outline-primary float-end"><i class="bi bi-arrow-right-square"></i> Entar</a>
                         </div>
                     </div>
                 </div>
@@ -38,7 +38,7 @@ require '../views/header.php'; ?>
                             </small>
                         </div>
                         <div class="container d-flex justify-content-center mt-4">
-                            <a href=<?php echo RUTA . 'views/admin_panel_usuarios.php'?> class="btn btn-primary float-end"><i class="bi bi-arrow-right-square"></i> Entar</a>
+                            <a href=<?php echo RUTA . 'views/admin_panel_usuarios.php'?> class="btn btn-outline-primary float-end"><i class="bi bi-arrow-right-square"></i> Entar</a>
                         </div>
                     </div>
                 </div>   
@@ -58,7 +58,7 @@ require '../views/header.php'; ?>
                             </small>
                         </div>
                         <div class="container d-flex justify-content-center mt-4">
-                            <a href=<?php echo RUTA . 'views/admin_panel_admins.php'?> class="btn btn-primary float-end"><i class="bi bi-arrow-right-square"></i> Entar</a>
+                            <a href=<?php echo RUTA . 'views/admin_panel_admins.php'?> class="btn btn-outline-primary float-end"><i class="bi bi-arrow-right-square"></i> Entar</a>
                         </div>
                     </div>
                 </div>
@@ -84,11 +84,7 @@ require '../views/header.php'; ?>
         <!-- OPCIONES -->
            
         </div>
-        <div class="d-flex mt-1">
-                <div class="mt-1">
-                    <a href="cerrar.php" class="btn btn-primary">Cerrar sesion</a>
-                </div>
-            </div>
+
 </section>
 <br>
 

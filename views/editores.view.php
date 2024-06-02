@@ -1,4 +1,4 @@
-<?php require '../views/header.php'; ?>
+<?php require 'views/header.php'; ?>
 
 <a href="../admin" class="btn btn-primary btn-lg mb-4">Volver</a>
 <div class="contenedor">

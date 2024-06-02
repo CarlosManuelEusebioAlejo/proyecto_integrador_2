@@ -23,15 +23,16 @@ if(empty($id_articulo)){
 }
 
 // Get the post data from the database based on the article ID
-$post = obtener_post_por_id($conexion, $id_articulo);
+$publicacion = obtener_post_por_id($conexion, $id_articulo);
+
 
 // Redirect to index page if the post does not exist
-if (!$post){
+if (!$publicacion){
     header('Location: index.php');
 }
 
 // Get the first post from the array
-$post = $post[0];
+$publicacion = $publicacion[0];
 
 // Include the single post view
 require 'views/single.view.php';

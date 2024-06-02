@@ -2,6 +2,7 @@
 // Include the configuration file and functions
 require 'admin/config.php';
 require 'functions.php';
+session_start();
 
 // Establish a database connection
 $conexion = conexion($bd_config);
@@ -18,11 +19,13 @@ if(isset($_GET['id']) || isset($_GET['usuario'])) {
     if(isset($_GET['id'])) {
         $id_usuario = id_articulo($_GET['id']); // CORRECTED FUNCTION NAME
         $perfil = obtener_usuario_por_id($conexion, $id_usuario);
+        $posts = obtener_post_editor($blog_config['post_por_pagina'], $conexion, $usuario);
     }
     // If username is provided, search by username
     else {
         $usuario = limpiarDatos($_GET['usuario']);
         $perfil = obtener_usuario_por_id($conexion, $usuario);
+        $posts = obtener_post_editor($conexion, $usuario);
     }
 
     // Check if the profile exists
@@ -36,6 +39,9 @@ if(isset($_GET['id']) || isset($_GET['usuario'])) {
     header('Location: index.php');
     exit(); // Ensure that the script stops after redirection
 }
+
+
+
 
 // Include the profile view
 require 'views/perfil.view.php';

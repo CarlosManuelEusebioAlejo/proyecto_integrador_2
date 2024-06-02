@@ -6,7 +6,7 @@ require '../admin/config.php';
 require '../functions.php';
 
 #se comprueba si la sesion de admin esta activa
-comprobarSessionadmin();
+
 
 #se comprueba si la conexion no se ha podido realizar
 $conexion = conexion($bd_config);
@@ -25,10 +25,14 @@ if (!$id) {
 //se prepara la consulta para aprobar el artículo y actualizar la fecha
 $statement = $conexion->prepare('UPDATE publicaciones SET status = "inactivo" WHERE id = :id');
 
-//se ejecuta la consulta con el id del articulo a aprobar y la fecha actual
+//se ejecuta la consulta con el id del articulo a aprob1ar y la fecha actual
 $statement->execute(array('id' => $id));
 
 
 //se redirige al admin
-header('Location: ' . RUTA . '/views/admin_panel_publicaciones.php');
+if ($_SESSION['usuario']['tipo'] == 'admin') {
+    header('Location: ' . RUTA . '/views/admin_panel_publicaciones.php');
+} else {
+    header('Location: ' . RUTA . '/views/editor_panel_publicaciones.php');
+}
 ?>

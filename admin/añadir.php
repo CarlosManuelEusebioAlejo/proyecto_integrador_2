@@ -1,53 +1,53 @@
 <?php 
-session_start(); // Start the session
+// Include the configuration file and functions
+require 'config.php';
+require '../functions.php';
+session_start();
 
-require 'config.php'; // Include the config file
-require '../functions.php'; // Include the functions file
-
-comprobarSessionadmin(); // Check if the admin session is valid
+// Establish a database connection
 $conexion = conexion($bd_config);
-if (!$conexion) {
-    header('Location: ../error.php');
+
+// If the connection fails, redirect to the error page
+if(!$conexion){
+    header('Location: error.php');
 }
 
-
-// añadimos nuevos editores o administradores al la base de datos
-if ($_SERVER['REQUEST_METHOD'] == 'POST') {
-    $usuario = limpiarDatos($_POST['usuario']);
+if ($_SERVER['REQUEST_METHOD'] == 'POST'){
     $nombre = limpiarDatos($_POST['nombre']);
-    $email = limpiarDatos($_POST['email']);
-    $password = limpiarDatos($_POST['contrasena']);
-    $tipo = ($_POST['tipo']);
     $apellido = limpiarDatos($_POST['apellido']);
-    $telefono = limpiarDatos($_POST['telefono']);
+    $usuario = limpiarDatos($_POST['Usuario']);
+    $correo = $_POST['email'];
+    $telefono = $_POST['telefono'];
     $experiencia = limpiarDatos($_POST['experiencia']);
+    $password = $_POST['contrasena'];
 
+    // Check if the username already exists in the usuarios table
+    $statement = $conexion->prepare('SELECT COUNT(*) AS total FROM usuarios WHERE usuario = :usuario');
+    $statement->execute(array(':usuario' => $usuario));
+    $resultado = $statement->fetch();
 
-    $errores = '';
-
-    if (empty($usuario) or empty($nombre) or empty($email) or empty($password) or empty($tipo)) {
-        $errores .= '<li>Por favor rellena todos los datos correctamente</li>';
+    // If the username already exists, display an error message
+    if ($resultado['total'] > 0) {
+        $mensaje1 = "El nombre de usuario ya está en uso. Por favor, elija otro.";
     } else {
-        try {
-            $conexion = new PDO('mysql:host=localhost;dbname=blog_web', 'angel1', '123');
-        } catch (PDOException $e) {
-            echo "Error: " . $e->getMessage();
-        }
-
-        $statement = $conexion->prepare('INSERT INTO usuarios (id, usuario, nombre, tipo, email, password, apellido, telefono, experiencia, perfil) VALUES (null, :usuario, :nombre, :tipo, :email, :password, :apellido, :telefono, :experiencia, "default.jpg")');
+        // Insert the postulante data into the postulantes table
+        $statement = $conexion->prepare('INSERT INTO usuarios (usuario, nombre, apellido, email, telefono, experiencia, password, status, tipo) VALUES (:usuario, :nombre, :apellido, :correo, :telefono, :experiencia, :password, "activo", "admin")');
         $statement->execute(array(
             ':usuario' => $usuario,
             ':nombre' => $nombre,
-            ':tipo' => $tipo,
-            ':email' => $email,
-            ':password' => $password,
             ':apellido' => $apellido,
+            ':correo' => $correo,
             ':telefono' => $telefono,
-            ':experiencia' => $experiencia
+            ':experiencia' => $experiencia,
+            ':password' => $password
         ));
 
-        header('Location: editores.php');
+        // Success message
+        $mensaje = "¡Registro exitoso.";
+
+        // Redirect to success page or show success message here
     }
 }
 
-require '../views/añadir.view.php'; // Include the 'nuevo.view.php' file
+require '../views/añadir.view.php';
+?>
