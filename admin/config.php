@@ -1,7 +1,7 @@
 <?php
 
 #se define la ruta del proyecto
-define('RUTA', 'http://localhost/blog11/');
+define('RUTA', 'http://localhost/blog_main/');
 
 #se definen los datos de la base de datos
 $bd_config = array(

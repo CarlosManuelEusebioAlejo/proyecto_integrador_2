@@ -14,6 +14,7 @@
             <div class="signin-signup">
                 <form class="sign-in-form" action="<?php echo htmlspecialchars($_SERVER['PHP_SELF']); ?>" method="POST" >
                     <h2 class="title"><b>INICIO DE SESIÓN</b></h2>
+                    <br>
                     <div class="input-field">
                         <i class="bi bi-person-circle"></i>
                         <input type="text" name="usuario" placeholder="usuario">

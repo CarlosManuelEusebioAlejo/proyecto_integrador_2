@@ -13,13 +13,17 @@ body {
   background-size: cover;
 }
 .container {
-  position: relative;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: rgba(121, 107, 107, 0.373);
+  padding: 20px;
+  border-radius: 15px;
+  box-shadow: 0 4px 20px 0 rgba(0, 0, 0, 0.3), 0 6px 20px 0 rgba(0, 0, 0, 0.3);  text-align: center;
+  overflow: hidden;
   width: 50vw;
   height: 70vh;
-  background: rgba(255, 255, 255, 0.2);
-  border-radius: 15px;
-  box-shadow: 0 4px 20px 0 rgba(0, 0, 0, 0.3), 0 6px 20px 0 rgba(0, 0, 0, 0.3);
-  overflow: hidden;
 }
 .container::before {
   content: "";
@@ -29,7 +33,7 @@ body {
   width: 50%;
   height: 50%;
   /* background: linear-gradient(-45deg, #50727B, #50727B); */
-  z-index: 6;
+  z-index: 4;
   transform: translateX(100%);
   transition: 1s ease-in-out;
 }
@@ -41,8 +45,8 @@ body {
   height: 100%;
   display: flex;
   align-items: center;
-  justify-content: space-around;
-  z-index: 5;
+  justify-content: center;
+  z-index: 10;
 }
 form {
   display: flex;
@@ -64,9 +68,11 @@ form.sign-up-form {
   transition-delay: 1s;
 }
 .title {
+
   font-size: 40px;
-  color: #111010;
-  margin-bottom: 10px;
+  color: #ffffff;
+  margin-bottom: 35px;
+  white-space: nowrap;
 }
 .input-field {
   width: 80%;
@@ -105,6 +111,7 @@ form.sign-up-form {
   margin: 10px 0;
   text-transform: uppercase;
   cursor: pointer;
+  margin-top: 35px;
 }
 .btn:hover {
   background: #6da0ae;
